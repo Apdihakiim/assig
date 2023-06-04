@@ -1,0 +1,198 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my box</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Times New Roman', Times, serif;
+            padding: 10px;
+            background:yellow;
+        }
+  
+        /*Header/Blog Title*/
+        .header{
+            padding: 30px;
+            text-align: center;
+            background:rgb(4, 211, 97);
+        }
+        .header:hover{
+            background: #770b4e;
+        }
+        .header h1{
+            font-size: 50px;
+            color: #271402;
+        }
+        /*Style the top navigation bar*/
+      .topnav{
+          overflow: hidden;
+          background-color:rgb(238, 14, 14);
+      }
+      /*style the topnav links*/
+      .topnav a{
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 25px;
+            text-decoration: none;
+        }
+        /*change color on hover*/
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        /*create two unequal colums that float next too each other*/
+        /*left column*/
+        .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+        /*right column*/
+        .rightcolumn{
+            float: left;
+            width: 25%;
+            background-color: rgb(92, 94, 3);
+            padding-left: 20px;
+        }
+        /*fake image*/
+        .fakeimg {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            padding: 20px;
+            margin: 1px;
+        }
+        /*Add a card effect for articles*/
+        .card {
+            background-color: rgb(223, 123, 9);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .card:hover{
+            background: #20bd0c;
+        }
+        .card h2 {
+            color: #3700ff;
+            text-align: center;
+        }
+        /*clear floats after the columns*/
+        .row::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+        /*footer*/
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: rgb(243, 100, 17);
+            margin-top: 20px;
+        }
+        .footer h2 {
+            color: #154602;
+        }
+        /*Responsive layout-when the screen is less than 800px wide, make the two columns
+        stack on top of each other instead of next to each other*/
+        @media  screen and  (max-width: 800px){
+            .leftcolumn,.rightcolumn,{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /*Responsive layout-when the screen is less than 400px wide, make the navigation links
+        stack on top of each other instead of next to each other*/
+        @media screen and(max-width: 400px){
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+        }
+        img {
+            width: 100%;
+            padding-top: 20;
+            height: 60px;
+            margin-top: 5px;
+        }
+        .img1 {
+            width: 100%;
+            padding-top: 20;
+            height: 170px;
+            margin-top: 5px;
+        }
+        .par{
+            color: rgb(255, 255, 255);
+        }
+        .bar{
+            color: #770b4e;
+        }
+        .img2{
+            width: 400px;
+            height: 200px;
+            padding: 0px;
+            margin: 0;
+            background-color: #000000;
+        }
+        video{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ORGANIC CHEMISTRY</h1>
+        <p class="par">SATURATED HYDROCARBONS</p>
+    <div class="topnav">
+        <a href="#footer" target="_blank">HOME</a>
+        <a href="#footer" target="_blank">PROTEIN</a>
+        <a href="#footer" target="_blank">CARBOHYDRATE</a>
+        <a href="#footer" target="_blank">LIPIDS</a>
+        <a href="#footer"  target="_blank">VITAMINS</a>
+        <a href="#footer" target="_blank" >ABOUT</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>ALKANES</h2>
+                <h5 class="bar">In organic chemistry, an alkane, or paraffin, is an acyclic saturated hydrocarbon. In other words, an alkane consists of hydrogen and carbon atoms arranged in a tree structure in which all the carbon–carbon bonds are single. Alkanes have the general chemical formula CₙH₂ₙ₊₂. </h5>
+                <div class="fakeimg" style="height: 200px;"><img class="img1" src="download.png" alt=""></div>
+                <p class="par">KNOWLEDGEMENT</p>
+                <p class="bar">
+                    Alkanes are hydrocarbons in which the carbon atoms are held together by single bonds. Their general formula is CnH2n+2 for molecules which do not contain ring structures.
+                </p>
+            </div>
+            <div class="card">
+                <h2>ALKENE</h2>
+                <h5 class="par">DESCRIPTION</h5>
+                <div class="fakeimg" style="height: 200px;"><img src="ALKENE.png" alt="" class="img1"></div>
+                <p class="par">REFRACTORY</p>
+                <p class="bar">In organic chemistry, an alkene is a hydrocarbon containing a carbon–carbon double bond. The double bond may be internal or in the terminal position. Terminal alkenes are also known as α-olefins. </p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About chemistry</h2>
+                <div class="fakeimg" style="height: 100px;"><img src="gigachad.jpeg" alt="" class="img"></div>
+                <p class="bar">In organic chemistry, an alkene is a hydrocarbon containing a carbon–carbon double bond. The double bond may be internal or in the terminal position. Terminal alkenes are also known as α-olefins. </p>
+            </div>
+            <div class="card">
+                <h3>popular post</h3>
+                <div class="fakeimg"><p class="par">PROTEIN</p><img src="protein.jpeg" alt=""></div>
+                <div class="fakeimg"><p class="par"> CARCULAS</p><img src="carculus.png" alt=""></div>
+                <div class="fakeimg"><p class="par">FOOTBALL</p><img src="messi.jpeg" alt=""></div>
+            </div>
+            <div class="card">
+                <h3 class="par">follow me</h3>
+                <p class="bar">apdihakeem6@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>END</h2>
+    </div>
+</body>
+</html>
